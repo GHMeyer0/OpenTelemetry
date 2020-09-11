@@ -1,0 +1,17 @@
+version: '3.4'
+
+services:
+  serviceb:
+    image: ${DOCKER_REGISTRY-}serviceb
+    build:
+      context: .
+      dockerfile: ServiceB/Dockerfile
+
+  servicea:
+    image: ${DOCKER_REGISTRY-}servicea
+    build:
+      context: .
+      dockerfile: ServiceA/Dockerfile
+
+  rabbit:
+    image: r
